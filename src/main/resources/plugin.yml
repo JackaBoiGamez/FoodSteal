@@ -8,5 +8,5 @@ website: https://www.jackaboi.net/plugins
 
 commands:
   setmaxfoodlevel:
-    description: Sets the targeted player's food.
+    description: Sets the targeted player's food level.
     usage: /setmaxfoodlevel <player> <food level [0-20]>
