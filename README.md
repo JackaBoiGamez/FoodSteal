@@ -1,7 +1,7 @@
-# FoodSteal
-FoodSteal is basically LifeSteal but with Food Bars
+# FoodSteal - [a01] - [Untested]
+Description:
+Player's have a max food level which will limit their food bars.
+They lose food levels by dying and can gain them by killing other players. 
 
-When the player dies there max food level will decrease
-
-You can use the "/setmaxfoodlevel" command if you need to set someone's food level for some reason.
-/setmaxfoodlevel <player> <food level [0-20]>
+Commands:
+-"/setmaxfoodlevel" - Sets the targeted player's food level.
