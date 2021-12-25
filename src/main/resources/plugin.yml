@@ -5,3 +5,8 @@ api-version: 1.18
 authors: [ JackaBoi ]
 description: Food Steal Plugin
 website: https://www.jackaboi.net/plugins
+
+commands:
+  setmaxfoodlevel:
+    description: Sets the targeted player's food.
+    usage: /setmaxfoodlevel <player> <food level [0-20]>

@@ -34,10 +34,12 @@ public class Events implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e){
         if(e.getEntity().isDead()){
-            if(plugin.getConfig().getInt("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel")!=0) plugin.getConfig().set("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel", plugin.getConfig().getInt("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel")-1);
+            if(plugin.getConfig().getInt("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel")!=0){
+                plugin.getConfig().set("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel", plugin.getConfig().getInt("Players."+e.getEntity().getUniqueId()+".MaxFoodLevel")-1);
+                plugin.saveConfig();
+            }
             if (e.getEntity().getKiller()!=null) {
                 plugin.getConfig().set("Players."+e.getEntity().getKiller().getUniqueId()+".MaxFoodLevel", plugin.getConfig().getInt("Players."+e.getEntity().getKiller().getUniqueId()+".MaxFoodLevel")+1);
-                e.getEntity().getKiller().setFoodLevel(plugin.getConfig().getInt("Players."+((Player)e.getEntity().getKiller()).getUniqueId()+".MaxFoodLevel"));
             }
         }
     }
