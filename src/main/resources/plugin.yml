@@ -1,0 +1,7 @@
+name: FoodSteal
+version: '${project.version}'
+main: dev.JackaBoi.FoodSteal.Main
+api-version: 1.18
+authors: [ JackaBoi ]
+description: Food Steal Plugin
+website: https://www.jackaboi.net/plugins
