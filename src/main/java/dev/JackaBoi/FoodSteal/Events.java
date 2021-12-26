@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 
 public class Events implements Listener {
 
@@ -42,6 +43,10 @@ public class Events implements Listener {
                 plugin.getConfig().set("Players."+e.getEntity().getKiller().getUniqueId()+".MaxFoodLevel", plugin.getConfig().getInt("Players."+e.getEntity().getKiller().getUniqueId()+".MaxFoodLevel")+1);
             }
         }
+    }
+    @EventHandler
+    public void onPlayerRespawn(PlayerRespawnEvent e){
+        e.getPlayer().setFoodLevel(plugin.getConfig().getInt("Players."+e.getPlayer().getUniqueId()+".MaxFoodLevel"));
     }
 
 }
